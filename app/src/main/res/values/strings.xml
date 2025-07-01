@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Noctune</string>
+
+    <string name="action_exit">Exit player</string>
+
+    <string name="action_repeat_off">Repeat off</string>
+    <string name="action_repeat_on">Repeat on</string>
+    <string name="action_repeat_one">Repeat one</string>
+    <string name="action_repeat_all">Repeat all</string>
+    <string name="action_single_play">Single play</string>
+    <string name="action_shuffle">Shuffle song</string>
+
+</resources>

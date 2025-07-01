@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M25 66.6667V33.3333C25 31.0417 25.8167 29.0806 27.45 27.45C29.0833 25.8194 31.0444 25.0028 33.3333 25H66.6667C68.9583 25 70.9208 25.8167 72.5542 27.45C74.1875 29.0833 75.0028 31.0444 75 33.3333V66.6667C75 68.9583 74.1847 70.9208 72.5542 72.5542C70.9236 74.1875 68.9611 75.0028 66.6667 75H33.3333C31.0417 75 29.0806 74.1847 27.45 72.5542C25.8194 70.9236 25.0028 68.9611 25 66.6667Z" />
+</vector>

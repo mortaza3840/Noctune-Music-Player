@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#FFFFFF">
+
+    <!-- Merged Rewind Symbols + Vertical Line (Mirrored from Fast Forward) -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M19,18l-7,-6l7,-6v12zM15,18l-7,-6l7,-6v12zM5,6v12h2V6h-2z" />
+</vector>
+
+
+

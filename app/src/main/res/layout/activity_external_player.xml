@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_external_list"
+        android:gravity="center_vertical"
+        android:layout_margin="16dp"
+        android:padding="20dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageview"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:padding="1dp"
+                android:background="@drawable/ic_music_logo"
+                android:scaleType="centerCrop"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtsn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:textSize="14sp"
+                    android:textColor="@drawable/button_color_selector_primary"
+                    android:maxLines="2"
+                    android:textStyle="italic"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/txtan"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtsstart"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="0:00"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="/"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/txtsstop"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="0:00"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnplay"
+                android:layout_height="32dp"
+                android:layout_width="32dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ic_pause"
+                android:backgroundTint="@drawable/button_color_selector_white"/>
+
+            <Button
+                android:id="@+id/btnstop"
+                android:layout_height="32dp"
+                android:layout_width="32dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ic_external_exit"
+                android:backgroundTint="@drawable/button_color_selector_white" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:thumbTint="@color/colorPrimary"
+            android:progressTint="@color/colorPrimary"
+            android:backgroundTint="@color/white"
+            android:progressBackgroundTint="@color/white"
+            android:progress="0" />
+
+    </LinearLayout>
+
+</RelativeLayout>

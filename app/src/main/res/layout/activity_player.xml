@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/bgPlayer_old"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@color/black"/>
+
+    <ImageView
+        android:id="@+id/bgPlayer_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@color/black"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="#80000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtsn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@drawable/button_color_selector_primary"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:clickable="true">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="40dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="center">
+            </TextView>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Album art old -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageview_album_old"
+                    android:padding="2dp"
+                    android:layout_marginVertical="40dp"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/ic_music_logo"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#80000000" />
+
+                <!-- Album art new -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageview_album_new"
+                    android:padding="2dp"
+                    android:layout_marginVertical="40dp"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/ic_music_logo"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#80000000" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:progressBackgroundTint="@color/white">
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/txtsstart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/seekbar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="0:00"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:ellipsize="start"
+                    android:singleLine="true"
+                    android:clickable="true">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtsstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/seekbar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="0:00"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:ellipsize="start"
+                    android:singleLine="true"
+                    android:clickable="true">
+                </TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/playbtn"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_pause"
+                    android:backgroundTint="@drawable/button_color_selector_white">
+                </Button>
+
+                <Button
+                    android:id="@+id/btnnext"
+                    android:layout_toEndOf="@+id/playbtn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:backgroundTint="@drawable/button_color_selector_primary"
+                    android:background="@drawable/ic_next"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/btnprev"
+                    android:layout_toStartOf="@+id/playbtn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:backgroundTint="@drawable/button_color_selector_primary"
+                    android:background="@drawable/ic_prev"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/btn_repeat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/btnnext"
+                    android:background="@drawable/ic_repeat_off"
+                    android:backgroundTint="@drawable/button_color_selector_primary"/>
+
+                <Button
+                    android:id="@+id/btn_favorite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/btnprev"
+                    android:background="@drawable/ic_favorite_border"
+                    android:backgroundTint="@drawable/button_color_selector_primary"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
